@@ -1,8 +1,16 @@
-name: Lint
-on: [push, pull_request]
+name: Run Tests and Linting
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,3 +31,7 @@ jobs:
 
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
+
+      - name: Run pytest
+        run: |
+          pytest app/tests --maxfail=0 --disable-warnings -q
