@@ -36,6 +36,7 @@ This project is a debt processing system built with FastAPI, Celery, RabbitMQ, a
    ```bash
    docker-compose up --build -d
    ```
+   **Note:** You can set the concurrency level for the Celery app using the `CONCURRENCY` environment variable **before building the application**. For example: `SET CONCURRENCY=4`. By default, the value is `CONCURRENCY=8`.
 
 3. Access the application:
    - **API Base URL**: `http://localhost:8000`
