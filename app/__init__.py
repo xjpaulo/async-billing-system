@@ -1,3 +1,3 @@
-from .celery import app
+from app.celery import app
 
 __all__ = ("app",)
