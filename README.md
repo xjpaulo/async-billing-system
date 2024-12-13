@@ -10,6 +10,7 @@ This project is a debt processing system built with FastAPI, Celery, RabbitMQ, a
 - **Task Monitoring**: Monitor task execution using Flower.
 - **API Documentation**: Swagger-based documentation available for easy interaction with the API.
 - **Pre-commit Linters**: Ensures code quality with tools like Black, isort, and Flake8 integrated into the pre-commit hooks.
+- **Continuous Integration (CI)**: The repository is configured with CI to run linters, unit tests, and integration tests locally, ensuring only validated code can be pushed or merged into the main branch.
 
 ## Why Celery, RabbitMQ, and Redis?
 
